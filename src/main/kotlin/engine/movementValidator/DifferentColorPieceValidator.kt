@@ -5,7 +5,7 @@ import edu.austral.dissis.chess.engine.board.Movement
 
 class DifferentColorPieceValidator : MovementValidator {
     override fun validate(gameState: GameState, movement: Movement): Boolean {
-        if(!gameState.getActualBoard().getTile(movement.getTo()).hasPiece()) return true
-        return gameState.getActualBoard().getTile(movement.getFrom()).getPiece().getColor() != gameState.getActualBoard().getTile(movement.getTo()).getPiece().getColor()
+        if(!gameState.getActualBoard().getSquare(movement.getTo()).hasPiece()) return true
+        return gameState.getActualBoard().getSquare(movement.getFrom()).getPiece().getColor() != gameState.getActualBoard().getSquare(movement.getTo()).getPiece().getColor()
     }
 }

@@ -12,8 +12,8 @@ class CastlingMover(
 ) : Mover {
 
     override fun move(movement: Movement, gameState: GameState) {
-        val oldFromTile = gameState.getActualBoard().getTile(movement.getFrom())
-        val oldToTile = gameState.getActualBoard().getTile(movement.getTo())
+        val oldFromTile = gameState.getActualBoard().getSquare(movement.getFrom())
+        val oldToTile = gameState.getActualBoard().getSquare(movement.getTo())
         gameState.getActualBoard().putAt(movement.getTo(), OccupiedSquare(oldToTile.getColor(), oldFromTile.getPiece()))
         gameState.getActualBoard().putAt(movement.getFrom(), EmptySquare(oldFromTile.getColor()))
 
@@ -22,8 +22,8 @@ class CastlingMover(
 
         if(movement.getFrom().getY() < movement.getTo().getY()) {
 
-            val oldFromTileRook = gameState.getActualBoard().getTile(Position(movement.getFrom().getX(), movement.getFrom().getY()+3))
-            val oldToTileRook = gameState.getActualBoard().getTile(Position(movement.getFrom().getX(), movement.getTo().getY()-1))
+            val oldFromTileRook = gameState.getActualBoard().getSquare(Position(movement.getFrom().getX(), movement.getFrom().getY()+3))
+            val oldToTileRook = gameState.getActualBoard().getSquare(Position(movement.getFrom().getX(), movement.getTo().getY()-1))
 
             gameState.getActualBoard().putAt(Position(movement.getFrom().getX(), movement.getTo().getY()-1), OccupiedSquare(oldToTileRook.getColor(), oldFromTileRook.getPiece()))
             gameState.getActualBoard().putAt(Position(movement.getFrom().getX(), movement.getFrom().getY()+3), EmptySquare(oldFromTileRook.getColor()))
@@ -32,8 +32,8 @@ class CastlingMover(
             gameState.getMovements().add(Movement(Position(movement.getFrom().getX(), movement.getFrom().getY()+3),Position(movement.getFrom().getX(), movement.getTo().getY()-1) ))
         }else {
 
-            val oldFromTileRook = gameState.getActualBoard().getTile(Position(movement.getFrom().getX(), movement.getFrom().getY()-4))
-            val oldToTileRook = gameState.getActualBoard().getTile(Position(movement.getFrom().getX(), movement.getTo().getY()+1))
+            val oldFromTileRook = gameState.getActualBoard().getSquare(Position(movement.getFrom().getX(), movement.getFrom().getY()-4))
+            val oldToTileRook = gameState.getActualBoard().getSquare(Position(movement.getFrom().getX(), movement.getTo().getY()+1))
 
             gameState.getActualBoard().putAt(Position(movement.getTo().getX(), movement.getTo().getY()+1), OccupiedSquare(oldToTileRook.getColor(), oldFromTileRook.getPiece()))
             gameState.getActualBoard().putAt(Position(movement.getFrom().getX(), movement.getFrom().getY()-4), EmptySquare(oldFromTileRook.getColor()))

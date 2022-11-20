@@ -12,10 +12,10 @@ class GeneratesCheckValidator : MovementValidator {
         val gameStateCopy = gameState.getCopy()
         val board = gameStateCopy.getActualBoard()
 
-        val oldFromTile = board.getTile(movement.getFrom())
-        val oldToTile = board.getTile(movement.getTo())
+        val oldFromTile = board.getSquare(movement.getFrom())
+        val oldToTile = board.getSquare(movement.getTo())
 
-        val playerColor = board.getTile(movement.getFrom()).getPiece().getColor()
+        val playerColor = board.getSquare(movement.getFrom()).getPiece().getColor()
 
         //if not it throws error when it looks for the king
         if(oldToTile.hasPiece() && oldToTile.getPiece().getColor() == playerColor && oldToTile.getPiece().getName() == "KING"){

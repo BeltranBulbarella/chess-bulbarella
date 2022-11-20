@@ -5,10 +5,11 @@ import edu.austral.dissis.chess.engine.mover.CastlingMover
 import edu.austral.dissis.chess.engine.mover.ClassicMover
 import edu.austral.dissis.chess.engine.mover.CoronationMover
 import edu.austral.dissis.chess.engine.piece.Piece
+import enums.PieceName
 
 class ClassicPieceFactory {
     fun pawn(id: String, color: String, startingSideX: Int): Piece {
-        return Piece(id, "PAWN", color, listOf(
+        return Piece(id, PieceName.PAWN.toString(), color, listOf(
             CoronationMover(
                 listOf(
                     NotSameTileValidator(),
@@ -58,7 +59,7 @@ class ClassicPieceFactory {
         ))
     }
     fun bishop(id: String, color: String): Piece {
-        return Piece(id, "BISHOP", color, listOf(
+        return Piece(id, PieceName.BISHOP.toString(), color, listOf(
             ClassicMover(
                 listOf(
                     NotSameTileValidator(),
@@ -72,7 +73,7 @@ class ClassicPieceFactory {
         ))
     }
     fun knight(id: String, color: String): Piece {
-        return Piece(id, "KNIGHT", color, listOf(
+        return Piece(id, PieceName.KNIGHT.toString(), color, listOf(
             ClassicMover(
                 listOf(
                     NotSameTileValidator(),
@@ -85,7 +86,7 @@ class ClassicPieceFactory {
         ))
     }
     fun rook(id: String, color: String): Piece {
-        return Piece(id, "ROOK", color, listOf(
+        return Piece(id, PieceName.ROOK.toString(), color, listOf(
             ClassicMover(
                 listOf(
                     NotSameTileValidator(),
@@ -109,7 +110,7 @@ class ClassicPieceFactory {
         ))
     }
     fun queen(id: String, color: String): Piece {
-        return Piece(id, "QUEEN", color, listOf(
+        return Piece(id, PieceName.QUEEN.toString(), color, listOf(
             ClassicMover(
                 listOf(
                     NotSameTileValidator(),
@@ -143,7 +144,7 @@ class ClassicPieceFactory {
         ))
     }
     fun king(id: String, color: String): Piece {
-        return Piece(id,"KING", color, listOf(
+        return Piece(id,PieceName.KING.toString(), color, listOf(
             ClassicMover(
                 listOf(
                     NotSameTileValidator(),
@@ -187,7 +188,7 @@ class ClassicPieceFactory {
         ))
     }
     fun knightBishop(id: String, color: String): Piece {
-        return Piece(id, "BISHOP", color, listOf(
+        return Piece(id, PieceName.BISHOP.toString(), color, listOf(
             //bishop movers
             ClassicMover(
                 listOf(
@@ -212,7 +213,7 @@ class ClassicPieceFactory {
         ));
     }
     fun knightRook(id: String, color: String): Piece {
-        return Piece(id, "ROOK", color, listOf(
+        return Piece(id, PieceName.ROOK.toString(), color, listOf(
             //rook movers
             ClassicMover(
                 listOf(

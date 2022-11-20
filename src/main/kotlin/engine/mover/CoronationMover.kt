@@ -10,8 +10,8 @@ import edu.austral.dissis.chess.engine.movementValidator.MovementValidator
 class CoronationMover(override val validators: List<MovementValidator>) : Mover{
 
     override fun move(movement: Movement, gameState: GameState) {
-        val oldFromTile = gameState.getActualBoard().getTile(movement.getFrom())
-        val oldToTile = gameState.getActualBoard().getTile(movement.getTo())
+        val oldFromTile = gameState.getActualBoard().getSquare(movement.getFrom())
+        val oldToTile = gameState.getActualBoard().getSquare(movement.getTo())
 
         val pieceFactory = ClassicPieceFactory()
         gameState.getActualBoard().putAt(movement.getTo(), OccupiedSquare(oldToTile.getColor(), pieceFactory.queen(oldFromTile.getPiece().getId(), oldFromTile.getPiece().getColor())))

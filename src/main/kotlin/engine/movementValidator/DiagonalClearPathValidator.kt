@@ -11,7 +11,7 @@ class DiagonalClearPathValidator : MovementValidator {
             var i = movement.getFrom().getX() - 1;
             var j = movement.getFrom().getY() - 1;
             while( i > movement.getTo().getX() && j > movement.getTo().getY()) {
-                if(gameState.getActualBoard().getTile(Position(i, j)).hasPiece()){
+                if(gameState.getActualBoard().getSquare(Position(i, j)).hasPiece()){
                     return false
                 }
                 i -= 1
@@ -22,7 +22,7 @@ class DiagonalClearPathValidator : MovementValidator {
             var i = movement.getFrom().getX() - 1;
             var j = movement.getFrom().getY() + 1;
             while( i > movement.getTo().getX() && j < movement.getTo().getY()) {
-                if(gameState.getActualBoard().getTile(Position(i, j)).hasPiece()){
+                if(gameState.getActualBoard().getSquare(Position(i, j)).hasPiece()){
                     return false
                 }
                 i -= 1
@@ -33,7 +33,7 @@ class DiagonalClearPathValidator : MovementValidator {
             var i = movement.getFrom().getX() + 1;
             var j = movement.getFrom().getY() - 1;
             while( i < movement.getTo().getX() && j > movement.getTo().getY()) {
-                if(gameState.getActualBoard().getTile(Position(i, j)).hasPiece()){
+                if(gameState.getActualBoard().getSquare(Position(i, j)).hasPiece()){
                     return false
                 }
                 i += 1
@@ -44,7 +44,7 @@ class DiagonalClearPathValidator : MovementValidator {
             var i = movement.getFrom().getX() + 1;
             var j = movement.getFrom().getY() + 1;
             while( i < movement.getTo().getX() && j < movement.getTo().getY()) {
-                if(gameState.getActualBoard().getTile(Position(i, j)).hasPiece()){
+                if(gameState.getActualBoard().getSquare(Position(i, j)).hasPiece()){
                     return false
                 }
                 i += 1

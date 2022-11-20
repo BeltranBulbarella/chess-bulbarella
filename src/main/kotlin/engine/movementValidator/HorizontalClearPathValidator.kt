@@ -10,7 +10,7 @@ class HorizontalClearPathValidator : MovementValidator {
         if(movement.getFrom().getY() < movement.getTo().getY()){
             var i = movement.getFrom().getY() + 1;
             while( i < movement.getTo().getY()) {
-                if(gameState.getActualBoard().getTile(Position(movement.getFrom().getX(), i)).hasPiece()){
+                if(gameState.getActualBoard().getSquare(Position(movement.getFrom().getX(), i)).hasPiece()){
                     return false
                 }
                 i += 1
@@ -19,7 +19,7 @@ class HorizontalClearPathValidator : MovementValidator {
         }else {
             var i = movement.getFrom().getY() - 1;
             while( i > movement.getTo().getY()) {
-                if(gameState.getActualBoard().getTile(Position(movement.getFrom().getX(), i)).hasPiece()){
+                if(gameState.getActualBoard().getSquare(Position(movement.getFrom().getX(), i)).hasPiece()){
                     return false
                 }
                 i -= 1

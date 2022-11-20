@@ -5,6 +5,6 @@ import edu.austral.dissis.chess.engine.board.Movement
 
 class EmptySquareValidator : MovementValidator {
     override fun validate(gameState: GameState, movement: Movement): Boolean {
-        return !gameState.getActualBoard().getTile(movement.getTo()).hasPiece()
+        return !gameState.getActualBoard().getSquare(movement.getTo()).hasPiece()
     }
 }

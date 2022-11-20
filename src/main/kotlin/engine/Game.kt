@@ -5,6 +5,7 @@ import edu.austral.dissis.chess.engine.board.Movement
 import edu.austral.dissis.chess.engine.finishValidator.FinishValidator
 import edu.austral.dissis.chess.gui.ChessPiece
 import edu.austral.dissis.chess.gui.PlayerColor
+import enums.Color
 import edu.austral.dissis.chess.gui.Position as Pos
 
 class Game (
@@ -17,10 +18,10 @@ class Game (
     }
 
     fun move(movement: Movement): GameState  {
-        if(!gameState.getActualBoard().getTile(movement.getFrom()).hasPiece()) throw Exception("Theres no piece")
-        if(gameState.getActualBoard().getTile(movement.getFrom()).getPiece().getColor() != getNextPlayerColor()) throw Exception("Not your turn")
+        if(!gameState.getActualBoard().getSquare(movement.getFrom()).hasPiece()) throw Exception("Theres no piece")
+        if(gameState.getActualBoard().getSquare(movement.getFrom()).getPiece().getColor() != getNextPlayerColor()) throw Exception("Not your turn")
 
-        val pieceToMove = gameState.getActualBoard().getTile(movement.getFrom()).getPiece()
+        val pieceToMove = gameState.getActualBoard().getSquare(movement.getFrom()).getPiece()
         pieceToMove.move(movement, gameState)
         gameState.toggleLastColorMovement()
         checkWinner()
@@ -37,16 +38,16 @@ class Game (
     }
 
     private fun getNextPlayerColor(): String {
-        return if(gameState.getLastColorMovement() == "BLACK") {
-            "WHITE"
+        return if(gameState.getLastColorMovement() == Color.BLACK.toString()) {
+            Color.WHITE.toString()
         } else {
-            "BLACK"
+            Color.BLACK.toString()
         }
     }
 
     fun getNextPlayer(): PlayerColor {
         val color = getNextPlayerColor()
-        return if(color == "BLACK") {
+        return if(color == Color.BLACK.toString()) {
             PlayerColor.BLACK
         }else {
             PlayerColor.WHITE
@@ -57,7 +58,7 @@ class Game (
         val pieces = gameState.getActualBoard().getPieces()
         return pieces.map {piece ->
             ChessPiece(
-                piece.getId(), if(piece.getColor() == "BLACK"){ PlayerColor.BLACK} else { PlayerColor.WHITE},
+                piece.getId(), if(piece.getColor() == Color.BLACK.toString()){ PlayerColor.BLACK} else { PlayerColor.WHITE},
                 Pos(gameState.getActualBoard().getPositionFromPiece(piece).getX()+1, gameState.getActualBoard().getPositionFromPiece(piece).getY()+1), piece.getName().lowercase()
             )
         }
@@ -69,7 +70,7 @@ class Game (
 
     fun getWinner(): PlayerColor {
         val color = gameState.getWinner()
-        return if(color == "BLACK") {
+        return if(color == Color.BLACK.toString()) {
             PlayerColor.BLACK
         }else {
             PlayerColor.WHITE

@@ -5,8 +5,8 @@ import edu.austral.dissis.chess.engine.board.Movement
 
 class NotSameColorValidator : MovementValidator {
     override fun validate(gameState: GameState, movement: Movement): Boolean {
-        val toTile = gameState.getActualBoard().getTile(movement.getTo())
-        val fromTile = gameState.getActualBoard().getTile(movement.getFrom())
+        val toTile = gameState.getActualBoard().getSquare(movement.getTo())
+        val fromTile = gameState.getActualBoard().getSquare(movement.getFrom())
         return !toTile.hasPiece() || !toTile.getPiece().getColor().equals(fromTile.getPiece().getColor())
     }
 }

@@ -12,15 +12,15 @@ class CastlingSpecialValidator : MovementValidator {
     override fun validate(gameState: GameState, movement: Movement): Boolean {
 
         val pieceId = if(movement.getFrom().getY() <  movement.getTo().getY()) {
-            gameState.getActualBoard().getTile(Position(movement.getFrom().getX(), 7)).getPiece().getId()
+            gameState.getActualBoard().getSquare(Position(movement.getFrom().getX(), 7)).getPiece().getId()
         }else {
-            gameState.getActualBoard().getTile(Position(movement.getFrom().getX(), 0)).getPiece().getId()
+            gameState.getActualBoard().getSquare(Position(movement.getFrom().getX(), 0)).getPiece().getId()
         }
 
         //checks free space besides rook
-        if(movement.getFrom().getY() <  movement.getTo().getY() && gameState.getActualBoard().getTile(Position(movement.getFrom().getX(), 6)).hasPiece()) {
+        if(movement.getFrom().getY() <  movement.getTo().getY() && gameState.getActualBoard().getSquare(Position(movement.getFrom().getX(), 6)).hasPiece()) {
             return false
-        }else if (movement.getFrom().getY() >  movement.getTo().getY() && gameState.getActualBoard().getTile(Position(movement.getFrom().getX(), 1)).hasPiece()){
+        }else if (movement.getFrom().getY() >  movement.getTo().getY() && gameState.getActualBoard().getSquare(Position(movement.getFrom().getX(), 1)).hasPiece()){
             return false
         }
 
@@ -32,9 +32,9 @@ class CastlingSpecialValidator : MovementValidator {
         val initialBoard = gameState.getInitialBoardCopy()
         val movements = gameState.getMovements()
         for(movement in movements) {
-            if(initialBoard.getTile(movement.getFrom()).getPiece().getId() == pieceId) return false
-            val oldFromTile = initialBoard.getTile(movement.getFrom())
-            val oldToTile = initialBoard.getTile(movement.getTo())
+            if(initialBoard.getSquare(movement.getFrom()).getPiece().getId() == pieceId) return false
+            val oldFromTile = initialBoard.getSquare(movement.getFrom())
+            val oldToTile = initialBoard.getSquare(movement.getTo())
             initialBoard.putAt(movement.getTo(), OccupiedSquare(oldToTile.getColor(), oldFromTile.getPiece()))
             initialBoard.putAt(movement.getFrom(), EmptySquare(oldFromTile.getColor()))
         }
