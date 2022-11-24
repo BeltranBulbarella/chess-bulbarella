@@ -11,6 +11,7 @@ class ClassicMover(
 ) : Mover {
 
     override fun move(movement: Movement, gameState: GameState) {
+        //valida movimiento y lo aplica
         val oldFromTile = gameState.getActualBoard().getSquare(movement.getFrom())
         val oldToTile = gameState.getActualBoard().getSquare(movement.getTo())
         gameState.getActualBoard().putAt(movement.getTo(), OccupiedSquare(oldToTile.getColor(), oldFromTile.getPiece()))

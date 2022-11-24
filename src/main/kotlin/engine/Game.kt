@@ -18,7 +18,9 @@ class Game (
     }
 
     fun move(movement: Movement): GameState  {
+        //if press on an empty square throw there is no piece
         if(!gameState.getActualBoard().getSquare(movement.getFrom()).hasPiece()) throw Exception("Theres no piece")
+        //if not your turn throw not your turn
         if(gameState.getActualBoard().getSquare(movement.getFrom()).getPiece().getColor() != getNextPlayerColor()) throw Exception("Not your turn")
 
         val pieceToMove = gameState.getActualBoard().getSquare(movement.getFrom()).getPiece()

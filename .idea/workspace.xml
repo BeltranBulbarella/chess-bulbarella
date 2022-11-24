@@ -4,38 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4dde7462-e41c-443f-ab16-2556e7856362" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4dde7462-e41c-443f-ab16-2556e7856362" name="Changes" comment="changes">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/Game.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/Game.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/board/Board.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/board/Board.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/board/EmptySquare.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/board/EmptySquare.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/board/Movement.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/board/Movement.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/board/OccupiedSquare.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/board/OccupiedSquare.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/board/Position.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/board/Position.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/board/Square.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/board/Square.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/board/SquaredBoard.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/board/SquaredBoard.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/factory/BoardFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/factory/BoardFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/enums/Color.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/enums/Color.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/enums/PieceName.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/enums/PieceName.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/factory/ClassicGameFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/factory/ClassicGameFactory.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/factory/ClassicPieceFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/factory/ClassicPieceFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/factory/SquaredBoardFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/factory/SquaredBoardFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/finishValidator/CheckMateValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/finishValidator/CheckMateValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/CastlingSpecialValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/CastlingSpecialValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/DiagonalClearPathValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/DiagonalClearPathValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/DifferentColorPieceValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/DifferentColorPieceValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/EatsValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/EatsValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/EmptySquareValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/EmptySquareValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/GeneratesCheckValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/GeneratesCheckValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/HasMovedValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/HasMovedValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/HorizontalClearPathValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/HorizontalClearPathValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/NotSameColorValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/NotSameColorValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/VerticalClearPathValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/movementValidator/VerticalClearPathValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/mover/CastlingMover.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/mover/CastlingMover.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/mover/ClassicMover.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/mover/ClassicMover.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/mover/CoronationMover.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/mover/CoronationMover.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/piece/Piece.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/piece/Piece.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,22 +71,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/beltranbulbarella/IdeaProjects/chess-bulbarella/src/main/kotlin/engine/enums",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/beltranbulbarella/IdeaProjects/chess-bulbarella/src/main/kotlin/engine/factory&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/engine/factory" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/engine/enums" />
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/game" />
@@ -189,8 +169,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668972410094</updated>
-      <workItem from="1668972412203" duration="3943000" />
+      <workItem from="1668972412203" duration="4551000" />
+      <workItem from="1669168748418" duration="1219000" />
+      <workItem from="1669230116839" duration="4705000" />
     </task>
+    <task id="LOCAL-00001" summary="changes">
+      <created>1668976385434</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668976385434</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,5 +196,33 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/engine/Game.kt</url>
+          <line>32</line>
+          <properties class="edu.austral.dissis.chess.engine.Game" method="checkWinner">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/engine/Game.kt</url>
+          <line>58</line>
+          <properties class="edu.austral.dissis.chess.engine.Game" method="getChessPieces">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

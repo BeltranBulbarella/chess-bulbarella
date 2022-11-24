@@ -9,7 +9,7 @@ import edu.austral.dissis.chess.engine.finishValidator.FinishValidator
 import enums.Color
 
 class ClassicGameFactory(
-    //Factory for the creation of a classic game, requires a board and a pieec
+    //Factory for the creation of a classic game, requires a board and a piece factory
     private val squaredBoardFactory: SquaredBoardFactory,
     private val classicPieceFactory: ClassicPieceFactory
 ) {
@@ -27,6 +27,7 @@ class ClassicGameFactory(
             val finishValidators = listOf<FinishValidator>(
                 CheckMateValidator()
             )
+            //creates a board and asigns the pieces to it
             val board = squaredBoardFactory.create()
             for (i in 0..7) {
                 board.putAt(Position(1,i), OccupiedSquare(board.getSquare(Position(1,i)).getColor(), classicPieceFactory.pawn("1$i", Color.WHITE.toString(), 0)))

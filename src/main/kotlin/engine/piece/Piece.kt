@@ -11,6 +11,7 @@ class Piece (
     private val movers: List<Mover>,
 ) {
 
+    //to move a piece we have to check if the movement is valid and then move it
     fun move(movement: Movement, gameState: GameState) {
         for(mover in movers) {
             if(mover.validMovement(movement, gameState)) {
@@ -21,6 +22,7 @@ class Piece (
         throw Exception("Invalid move")
     }
 
+    //can move to a square if there is a valid movement
     fun canMove(movement: Movement, gameState: GameState): Boolean {
         for(mover in movers) {
             if(mover.validMovement(movement, gameState)) {

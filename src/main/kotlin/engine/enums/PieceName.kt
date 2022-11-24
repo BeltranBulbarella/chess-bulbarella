@@ -1,5 +1,6 @@
 package enums
 
 enum class PieceName {
-    QUEEN,KING, ROOK, BISHOP, KNIGHT, PAWN, BEROLINA_PAWN
+    //enum class to represent the name of a piece
+    QUEEN,KING, ROOK, BISHOP, KNIGHT, PAWN
 }

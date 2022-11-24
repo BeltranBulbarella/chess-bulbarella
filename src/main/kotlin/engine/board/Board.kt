@@ -4,7 +4,7 @@ import edu.austral.dissis.chess.engine.piece.Piece
 
 
 interface Board {
-    // Returns the tile at the given position
+    // Returns the square at the given position
     fun getSquare(position: Position): Square
     // Puts a square at the given position
     fun putAt(position: Position, square: Square): Square

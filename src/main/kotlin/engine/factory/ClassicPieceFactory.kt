@@ -10,6 +10,7 @@ import enums.PieceName
 class ClassicPieceFactory {
     fun pawn(id: String, color: String, startingSideX: Int): Piece {
         return Piece(id, PieceName.PAWN.toString(), color, listOf(
+            //coronation
             CoronationMover(
                 listOf(
                     NotSameTileValidator(),
@@ -22,6 +23,7 @@ class ClassicPieceFactory {
                     GeneratesCheckValidator()
                 )
             ),
+            //1 move foward
             ClassicMover(
                 listOf(
                     NotSameTileValidator(),
@@ -33,6 +35,7 @@ class ClassicPieceFactory {
                     GeneratesCheckValidator()
                 )
             ),
+            //2 moves foward only first time
             ClassicMover(
                 listOf(
                     NotSameTileValidator(),
@@ -45,6 +48,7 @@ class ClassicPieceFactory {
                     GeneratesCheckValidator()
                 )
             ),
+            //capture move 1 diagonal
             ClassicMover(
                 listOf(
                     NotSameTileValidator(),
@@ -88,6 +92,7 @@ class ClassicPieceFactory {
     fun rook(id: String, color: String): Piece {
         return Piece(id, PieceName.ROOK.toString(), color, listOf(
             ClassicMover(
+                //rook movement horizontal
                 listOf(
                     NotSameTileValidator(),
                     InBoundsValidator(),
@@ -97,6 +102,7 @@ class ClassicPieceFactory {
                     NotSameColorValidator()
                 )
             ),
+            //rook movement vertical
             ClassicMover(
                 listOf(
                     NotSameTileValidator(),
@@ -146,6 +152,7 @@ class ClassicPieceFactory {
     fun king(id: String, color: String): Piece {
         return Piece(id,PieceName.KING.toString(), color, listOf(
             ClassicMover(
+                //knight 1 horizontal
                 listOf(
                     NotSameTileValidator(),
                     InBoundsValidator(),
@@ -155,6 +162,7 @@ class ClassicPieceFactory {
                     NotSameColorValidator()
                 )
             ),
+            //knight 1 vertical
             ClassicMover(
                 listOf(
                     NotSameTileValidator(),
@@ -165,6 +173,7 @@ class ClassicPieceFactory {
                     NotSameColorValidator()
                 )
             ),
+            //knight 1 diagonal
             ClassicMover(
                 listOf(
                     NotSameTileValidator(),
