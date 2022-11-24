@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4dde7462-e41c-443f-ab16-2556e7856362" name="Changes" comment="changes">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/engine/factory/capablancaChess/CapablancaGameFactory.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/engine/factory/capablancaChess/CapablancaPieceFactory.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/engine/factory/capablancaChess/CustomBoardFactory.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/engine/factory/capablancaChess/CustomBoardGameFactory.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/Game.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/Game.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/board/Board.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/board/Board.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/enums/Color.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/enums/Color.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/enums/PieceName.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/enums/PieceName.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/factory/ClassicGameFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/factory/ClassicGameFactory.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/factory/ClassicPieceFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/factory/ClassicPieceFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/mover/ClassicMover.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/mover/ClassicMover.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/engine/piece/Piece.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/engine/piece/Piece.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,27 +69,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/beltranbulbarella/IdeaProjects/chess-bulbarella/src/main/kotlin/engine/factory&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/beltranbulbarella/IdeaProjects/chess-bulbarella/src/main/kotlin/engine",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/engine" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/engine/factory" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/engine/enums" />
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/game" />
-      <recent name="$PROJECT_DIR$/src/main/kotlin/mover" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="board.piece" />
@@ -204,15 +202,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/engine/Game.kt</url>
-          <line>32</line>
-          <properties class="edu.austral.dissis.chess.engine.Game" method="checkWinner">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/src/main/kotlin/engine/Game.kt</url>
           <line>58</line>

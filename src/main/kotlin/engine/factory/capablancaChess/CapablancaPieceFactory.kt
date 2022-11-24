@@ -1,4 +1,4 @@
-package edu.austral.dissis.chess.engine.factory
+package edu.austral.dissis.chess.engine.factory.capablancaChess
 
 import edu.austral.dissis.chess.engine.movementValidator.*
 import edu.austral.dissis.chess.engine.mover.CastlingMover
@@ -6,7 +6,7 @@ import edu.austral.dissis.chess.engine.mover.ClassicMover
 import edu.austral.dissis.chess.engine.piece.Piece
 import enums.PieceName
 
-class ClassicPieceFactory {
+class CapablancaPieceFactory {
     fun pawn(id: String, color: String, startingSideX: Int): Piece {
         return Piece(id, PieceName.PAWN.toString(), color, listOf(
             //coronation
@@ -182,5 +182,65 @@ class ClassicPieceFactory {
                 )
             )
         ))
+    }
+    fun knightBishop(id: String, color: String): Piece {
+        return Piece(id, PieceName.BISHOP.toString(), color, listOf(
+            //bishop movers
+            ClassicMover(
+                listOf(
+                    NotSameTileValidator(),
+                    InBoundsValidator(),
+                    DiagonalMovementValidator(),
+                    DiagonalClearPathValidator(),
+                    GeneratesCheckValidator(),
+                    NotSameColorValidator()
+                )
+            ),
+            //knight movers
+            ClassicMover(
+                listOf(
+                    NotSameTileValidator(),
+                    InBoundsValidator(),
+                    SpecialHorseMovementValidator(),
+                    NotSameColorValidator(),
+                    GeneratesCheckValidator()
+                )
+            ),
+        ));
+    }
+    fun knightRook(id: String, color: String): Piece {
+        return Piece(id, PieceName.ROOK.toString(), color, listOf(
+            //rook movers
+            ClassicMover(
+                listOf(
+                    NotSameTileValidator(),
+                    InBoundsValidator(),
+                    HorizontalMovementValidator(),
+                    HorizontalClearPathValidator(),
+                    GeneratesCheckValidator(),
+                    NotSameColorValidator()
+                )
+            ),
+            ClassicMover(
+                listOf(
+                    NotSameTileValidator(),
+                    InBoundsValidator(),
+                    VerticalMovementValidator(),
+                    VerticalClearPathValidator(),
+                    GeneratesCheckValidator(),
+                    NotSameColorValidator()
+                )
+            ),
+            //knight movers
+            ClassicMover(
+                listOf(
+                    NotSameTileValidator(),
+                    InBoundsValidator(),
+                    SpecialHorseMovementValidator(),
+                    NotSameColorValidator(),
+                    GeneratesCheckValidator()
+                )
+            ),
+        ));
     }
 }

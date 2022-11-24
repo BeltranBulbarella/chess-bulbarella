@@ -5,6 +5,7 @@ package edu.austral.dissis.chess
 
 import edu.austral.dissis.chess.engine.CustomGameEngine
 import edu.austral.dissis.chess.engine.factory.ClassicGameFactory
+import edu.austral.dissis.chess.engine.factory.capablancaChess.CapablancaGameFactory
 import edu.austral.dissis.chess.gui.CachedImageResolver
 import edu.austral.dissis.chess.gui.DefaultImageResolver
 import edu.austral.dissis.chess.gui.GameView
